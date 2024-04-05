@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="loginApp">
+    <div class="Container" ng-controller="loginController">
+
+        <h1>Welcome back!</h1>
+        <p>We're so excited to see you again!</p>
+        <form name="userForm">
+            <div class="input-field">
+                <label for="email">
+                    <h3> Email or Phone Number </h3>
+                </label>
+                <input type="text" id="email" name="email" ng-model="user.email" ng-pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/" required>
+                <div class="warning" ng-show="userForm.email.$invalid && userForm.email.$touched">
+                    Please enter a valid email address.
+                </div>
+            </div>
+            <div class="input-field">
+                <label for="password">
+                    <h3>Password</h3>
+                </label>
+                <input type="password" id="password" name="password" ng-model="user.password" required ng-minlength="8">
+                <div class="warning" ng-show="userForm.password.$invalid && userForm.password.$touched">
+                    Password must be at least 8 characters long.
+                </div>
+            </div>
+            <div class="forgot">
+                <a href="#" ng-click="forgotPassword()">Forgot your password?</a>
+            </div>
+            <button class="loginBtn" type="submit" ng-click="login()" ng-disabled="userForm.$invalid">Log In</button>
+
+        </form>
+        <p class="need-account" >Need an account? <a href="/SignUP/sign.html">Register</a></p>
+        <div class="qr">
+            <img src="/Assets/images/QR.png" height="300px" width="250px" alt="">
+        </div>
+    </div>
+    <script>
+        angular.module('loginApp', [])
+            .controller('loginController', function($scope) {
+                $scope.user = {};
+                $scope.login = function() {
+                    // Add your login logic here
+                    console.log('Logging in with: ', $scope.user);
+                };
+            });
+    </script>
+</body>
+
+</html>
