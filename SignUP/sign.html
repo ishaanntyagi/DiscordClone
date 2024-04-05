@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="Sign.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-section">
+            <h1>Create an account</h1>
+            <form id="login-container">
+                <div class="input-field">
+                    <label class="email" for="email">Email</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div class="input-field">
+                    <label for="display_name">Display Name</label>
+                    <input type="text" id="display_name" name="display_name">
+                </div>
+                <div class="input-field">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username">
+                </div>
+                <div class="input-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div class="birthday-section">
+                    <div class="date-field">
+                        <label for="month">Month</label>
+                        <select id="month" name="month">
+                            <option value="january">January</option>
+                            <option value="february">February</option>
+                            <option value="march">March</option>
+                            <option value="april">April</option>
+                            <option value="may">May</option>
+                            <option value="june">June</option>
+                            <option value="july">July</option>
+                            <option value="august">August</option>
+                            <option value="september">September</option>
+                            <option value="october">October</option>
+                            <option value="november">November</option>
+                            <option value="december">December</option>
+                        </select>
+                    </div>
+                    <div class="day">
+                        <label for="day">Day</label>
+                        <input type="text" id="day" name="day">
+                    </div>
+                    <div class="year">
+                        <label for="year">Year</label>
+                        <input type="text" id="year" name="year">
+                    </div>
+                </div>
+                <div class="tick_opt">
+                    <p>(Optional) It's okay to send me emails with Discord updates, tips, and special offers. You can
+                        opt out at any time.</p>
+                    <div class="checkbox-field">
+                        <input class="tick_opt_" type="checkbox" id="optional_email" name="optional_email">
+                        <label for="optional_email"></label>
+                    </div>
+
+                    <div class="subm">
+                        <button type="submit" class="continue-btn">Continue</button>
+                    </div>
+                </div>
+
+            </form>
+            <div>
+                <p class="already-registered">Already have an account? <a href="/login/login.html">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-container').addEventListener('submit', async function(event) {
+          event.preventDefault(); // Prevent default form submission
+          
+          const formData = new FormData(this);
+          
+          console.log('Form data:', Object.fromEntries(formData)); // Log form data
+      
+          try {
+            const response = await fetch('http://localhost:3000/', {
+              method: 'POST',
+              body: formData
+            });
+      
+            console.log('Response:', response); 
+            
+          } catch (error) {
+            console.error('Error submitting form:', error);
+          }
+        });
+      </script>
+      <script src="backnew.js"></script>
+      <script src="validate.js"></script>
+     
+</body>
+</html>

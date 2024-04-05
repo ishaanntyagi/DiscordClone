@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #7289da; /* Discord brand blue */
+    background-image: url(/Assets/images/regf.png) ;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    
+}
+
+.login-section {
+    background-color: #2c2f33;
+    padding: 30px;
+    border-radius: 5px;
+    width: 400px;
+    height: 530px;
+    
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: white;
+}
+
+.input-field {
+    margin-bottom: 15px;
+    width: 100px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    
+}
+input{
+    width: 390px;
+    background: #23272a;
+    color: white;
+    border-bottom: #23272a;
+    border-top: #23272a;
+    border-right: #23272a;
+    height: 25px;
+
+}
+form{
+    color: white;
+    font-size: small;
+    font-weight: 20px;
+}
+
+.date-field{
+    background-color: #2c2f33;
+}
+
+/* .birthday-section{
+    .date-field{
+        width: 20px;
+
+    }
+} */
+#month{
+    background-color: #23272a;
+    color: white;
+    font-size: small;
+    width: 125px;
+    height: 23px;
+    
+}
+#day{
+    width: 60px;
+    height: 21px;   
+}
+.day{
+    margin-left: 150px;
+    margin-top: -40px;
+    font-size: small;
+}
+
+.year{
+    margin-left: 240px;
+    margin-top: -44px;
+    font-size: small;
+    /* width: 30px; */
+}
+#year{
+    width: 140px;
+    height: 21px;   
+}
+
+/* .continue-btn{
+    margin-left: 100px;
+} */
+
+.checkbox-field{
+    margin-left: 100px;
+    margin-top: -49px;
+    margin-left: -185px;
+    
+}
+p{
+    font-size: small;
+    font-weight: 20px;
+    /* margin-left: -100px; */
+}
+
+.subm{
+    margin-top: 20px;
+    width: 10px;
+}
+
+.already-registered{
+    margin-top: 10px;
+}
+
+.continue-btn{
+    width: 400px;
+    height: 30px;
+    background-color: #4e8ccc;
+    border-top: #4e8ccc;
+    border-bottom: #4e8ccc;
+    border-left:#4e8ccc ;
+    border-right: #4e8ccc;
+    margin-top: -40px;
+    
+}
+
+.tick_opt_{
+    margin-top: 45px;
+
+
+   
+}
+
