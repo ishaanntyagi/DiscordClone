@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #36393f;
+    color: #fff;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-buttons .button {
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    background-color: #fff;
+    color: #36393f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.communities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.communities h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.WebDiscord{
+    background-image: url(644fab4df2dc8d7a9a081ebd_8a8375ab7908384e1fd6efe408284203.jpg);
+}
